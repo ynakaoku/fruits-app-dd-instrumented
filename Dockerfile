@@ -27,6 +27,7 @@ RUN apt-get -y update
 RUN apt-get -y install wget unzip iputils-ping
 RUN apt-get -y install python3-pip
 RUN python -m pip install pymongo==3.9
+RUN python -m pip install ddtrace==2.9.2
 
 EXPOSE 80
 ENTRYPOINT ["/usr/local/bin/python", "/home/python/cgiserver.py"]
