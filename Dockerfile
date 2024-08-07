@@ -34,5 +34,5 @@ RUN python -m pip install ddtrace==2.9.2
 RUN apt-get -y remove python3-pip
 
 EXPOSE 80
-ENTRYPOINT ["/usr/local/bin/ddtrace-run", "/usr/local/bin/python", "-m", "/home/python/cgiserver.py"]
+ENTRYPOINT ["/usr/local/bin/ddtrace-run", "/usr/local/bin/python", "/home/python/cgiserver.py"]
 # USER python
