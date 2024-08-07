@@ -10,10 +10,10 @@ from bson.json_util import dumps, loads
 from bson import decode
 import os
 
-from ddtrace.runtime import RuntimeMetrics
-RuntimeMetrics.enable()
+# from ddtrace.runtime import RuntimeMetrics
+# RuntimeMetrics.enable()
 
-Title="NSX Solution Demo: フルーツ在庫表示"
+Title="Datadog Demo: フルーツ在庫表示"
 MongoHost = os.environ['MONGO_HOST'] 
 MongoPort = os.environ['MONGO_PORT']
 

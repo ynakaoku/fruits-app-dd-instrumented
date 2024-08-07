@@ -1,6 +1,6 @@
 import http.server
-from ddtrace.runtime import RuntimeMetrics
-RuntimeMetrics.enable()
+# from ddtrace.runtime import RuntimeMetrics
+# RuntimeMetrics.enable()
 
 server_address = ("", 80)
 handler_class = http.server.CGIHTTPRequestHandler
