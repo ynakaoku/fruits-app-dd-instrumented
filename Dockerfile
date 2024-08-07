@@ -9,6 +9,9 @@ ARG DD_GIT_REPOSITORY_URL
 ARG DD_GIT_COMMIT_SHA
 ENV DD_GIT_REPOSITORY_URL=${DD_GIT_REPOSITORY_URL} 
 ENV DD_GIT_COMMIT_SHA=${DD_GIT_COMMIT_SHA}
+ENV DD_SERVICE="ifruits-app"
+ENV DD_ENV=""
+ENV DD_VERSION="0.1"
 
 RUN mkdir /home/python
 WORKDIR /home/python
@@ -30,5 +33,5 @@ RUN python -m pip install pymongo==3.9
 RUN python -m pip install ddtrace==2.9.2
 
 EXPOSE 80
-ENTRYPOINT ["/usr/local/bin/python", "/home/python/cgiserver.py"]
+ENTRYPOINT ["/usr/local/bin/ddtrace-run", "/usr/local/bin/python", "-m", "/home/python/cgiserver.py"]
 # USER python
