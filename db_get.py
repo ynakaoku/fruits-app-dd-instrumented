@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import sys
-sys.path.append('/usr/local/lib/python3.9/site-packages/')
+# sys.path.append('/usr/local/lib/python3.9/site-packages/')
 import socket
 import cgi
 from pymongo import MongoClient
