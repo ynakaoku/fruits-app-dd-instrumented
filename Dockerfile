@@ -35,6 +35,5 @@ RUN apt-get -y remove python3-pip
 
 EXPOSE 80
 # ENTRYPOINT ["/usr/local/bin/ddtrace-run", "/usr/local/bin/python", "/home/python/cgiserver.py"]
-ENTRYPOINT ["ddtrace-run"]
-CMD ["ddtrace-run", "/usr/local/bin/python", "/home/python/cgiserver.py"]
+CMD ["/usr/local/bin/python", "/home/python/cgiserver.py"]
 # USER python
