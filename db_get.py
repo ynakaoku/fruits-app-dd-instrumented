@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/usr/bin/env python3
 import sys
 # sys.path.append('/usr/local/lib/python3.9/site-packages/')
 import socket
